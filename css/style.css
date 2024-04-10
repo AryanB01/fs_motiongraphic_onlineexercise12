@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+#ninja {
+	width: 306px;
+	height: 322px;
+	background: url('../images/ninja.jpg') left top;
+}
+.up {
+	animation: up steps(6) 2s infinite;
+}
+.down {
+	animation: down steps(6) 2s infinite;
+}
+.start {
+	animation: start steps(6) 0.5s infinite;
+}
+
+/* when the key is pressed down it only runs  */
+@keyframes down {
+	0%{
+		background-position-y: 670px;
+		background-position-x: 0;
+	}
+    50%{
+        background-position-y: 670px;
+		background-position-x: 900px;
+    }
+	100%{
+		background-position-y: 670px;
+		background-position-x: 1270px;
+	}
+}
+
+/* when the key is pressed up it slice  */
+@keyframes up {
+	0%{
+		background-position-y: 1355px;
+		background-position-x: 0;
+	}
+    50%{
+        background-position-y: 1355px;
+		background-position-x: 900px;
+    }
+	100%{
+		background-position-y: 1355px;
+		background-position-x: 1270px;
+	}
+}
+/* after the key is up it will just look like its gonna move */
+@keyframes start{
+	0%{
+		background-position-y: 0;
+		background-position-x: 0;
+	}
+	100%{
+		background-position-y: 3px;
+		background-position-x: 0;
+	}
+}
+
+
+ 
